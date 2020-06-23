@@ -22,3 +22,19 @@ console.log(getName);
 
 // let tomagochi = {};
 
+
+const foodButton = document.getElementById('food')
+let num = 0;
+
+const check = () => {
+    switch (num) {
+        case: 0:
+
+        foodButton.addEventListener('click', createSnackAndMealButtons)
+        num += 1;
+         return 1;
+
+         num -= 0;
+         return 0;
+    }
+}
