@@ -9,18 +9,51 @@
     
     
 </head>
-<body>
+<body> 
     <header>
-        <h1 class = 'name' id = 'firstName'> Hello, my name is Tommy Gachi!</h1>
-        <button>Name</button>
-        <button>Change Name</button>
-        <span id="timer">timer: 05:00</span>
-        <span id=""></span>
-        <button id="startGame">Begin</button>
-      
+        <h1><input id="firstName" type="nameDeclare" value="Hello, please give me a name!"></h1>
+        <button id="submit">Submit</button>
     </header>
+        <div class="gameBody">
+            <div class="screen">
+                <div class="years">
+                    <span id="timer">timer: 05:00</span>
+                    <span id="age">1</span>
+                </div>
+
+               
+            <div class="info">
+                    <h3 id="hungry">Hunger: 0</h3>
+                    <h3 id="tired">Tiredness: 0</h3>
+                    <h3 id="bored">Boredom: 0</h3>
+                </div>
+                <div class="character">
+                    <div id="head"></div>
+                    <div id="body"></div>
+                    <div id="lfoot"></div>
+                    <div id="rfoot"></div>
+                    <div id="larm"></div>
+                    <div id="rarm"></div>
+                    <div></div>
+                </div>
+                <div id="screenBottom"></div>
+          </div>
+          
+          <div class="allButtons">
+            <!-- <button class="myButtons" id="rightB">Name</button> -->
+            <button class="myButtons" id="leftB">Feed</button>
+            <button class="myButtons" id="leftC">Sleep</button>
+            <button class="myButtons" id="rightC">Play</button>
+
+        </div>
+        
+        </div>
+      
+
+
+
+   
     
-    <section class="squares"></section>
     
 </body>
 </html>

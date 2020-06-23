@@ -1,16 +1,67 @@
 # mattsGame
 
 
-What do I need to do to create a Tomagotchi?
 
+Where do I start?
+    -Define your classes/id's in your html
+    -The first classes that you will need are:
+        --name
+        --age
+        --hunger
+        --sleepiness
+        --boredom
+        --lights
+        --feed
+        --play
+
+What do I need to do to create a Tomagotchi?
+    -How long is this tomagachi supposed to be alive?
+    -How quickly should I age the tomagachi?
     -create stylings for the page including a background and some html with classes
     and ID's so that I can call on them in my js.
+
+
+What will the pet picture be?
+        ****Options for appeance*****
+    -Will it be able to move?
+        ****Yes at least one movement on and off screen and maybe a jump****
+    -Will it be able to speak?
+        ****Yes it will be able to speak****
+    -How do you even find a photo that moves or create an image that does?
+        ****Create the image using div's and use javascript to move the image****
     
-Where will you need ID's to call on?
-    -I will definitely need ID's for the excersize-hunger-sleepiness-boredom
-    -The naming area of the page should have an ID
-    -The age will need an ID 
-    -the buttons for feeding - lights - play with pet
+
+Buttons needed-----------------
+    -name entry button
+        -- when the name button is pressed it will look through alphabet
+        -- double click on the name button will select a letter
+        -- max letters will be 10
+        -- 
+
+    -feed button
+        --How much will feeding affect hunger?
+            -Hunger -2 points
+        --What will you feed your tomagochi?
+            --Bananas, yogurt, and oats
+            --salmon
+            --Create random for food button
+
+    -Lights
+        -sleep: tiredness goes back to 0;
+        -sleep lasts 1 minutes
+
+
+    -Play
+        -boredom -2 points
+        -randomize (Play catch, Play xbox, Play texas hold 'em)
+
+
+
+
+
+
+    
+    
 
 
 

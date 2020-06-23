@@ -1,3 +1,131 @@
 body {
-    background: green;
+    background: #fff;
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
+
+header {
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   align-items: center;
+  
+}
+
+#firstName {
+    width: 400px;
+    text-align: center;
+    border: none;
+    font-size: 30px;
+    
+}
+
+#submit {
+    height: 30px;
+    width: 70px;
+    position: relative;
+    left: 10px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+.gameBody {
+    background-color: rgb(1, 148, 21);
+    padding: 60px ;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 250px;
+    border-bottom-right-radius: 250px;
+    border: black 2px solid;
+ 
+}
+
+.screen {
+    background-color: lightblue;
+   width: 265px;
+   height: 325px;
+   border-radius: 25%;
+   border: black 2px solid;
+}
+
+.years {
+    /* background-color: rgb(158, 40, 158); */
+    width: 25%;
+    height: 10%;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    /* display: inline-block; */
+    left: 190px;
+    top: 10%;
+    border-radius: 45%;
+
+}
+
+.info {
+    font-size: 10px;
+    /* background: blue; */
+    text-align: center;
+    position: relative;
+    top: 10%;
+    left: 10px;
+    display: inline-block;
+    border-radius: 20%;
+    width: 80px;
+}
+
+#timer {
+   position: relative;
+    top: 25%;
+}
+
+#age {
+    position: relative;
+    top: 25%;
+}
+
+.allButtons {
+    left: 1em;
+    bottom: 1em;
+   
+}
+
+
+.myButtons {
+    text-align: center;
+    background: rgb(212, 177, 19);
+    border-radius: 45%;
+}
+
+/* #rightB {
+    transform: rotate(-45deg);
+    position: relative;
+   left: 220px;
+
+   
+} */
+
+#leftB {
+     transform: rotate(45deg);
+     position: relative;
+    
+
+}
+
+#leftC {
+    position: relative;
+    left: 60px;
+    top: 30px;
+}
+
+#rightC {
+    transform: rotate(-45deg);
+    position: relative;
+   left: 120px;
+
+}
+
