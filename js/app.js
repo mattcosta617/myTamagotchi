@@ -1,5 +1,5 @@
-const startTime = 5;
-let time = startTime * 60;
+const startTime = 1;
+let time = startTime * 1;
 
 let ageValue = 1;
 
@@ -11,22 +11,33 @@ let tiredValue = 0;
 
 
 const typeName = () => {
-    // let name = prompt('What would you like to name your tomagochi?', 'Tommy Gotchi!');
+    let name = prompt('What would you like to name your tomagochi?', 'Tommy Gotchi!');
 
-    // if (name != null) {
+    if (name != null) {
 
-    //     document.getElementById('firstName').innerHTML =
+        document.getElementById('firstName').innerHTML =
     
-    //     `Hello! My name is ${name}!`;
-    // }
-
-    setInterval(counting, 1000)
-    setInterval(hunger, 3000);
-    setInterval(tired, 3000);
-    setInterval(bored, 2000);
-};
-
-
+        `Hello! My name is ${name}!`;
+    }
+if(hungerValue === 10 || boredValue === 10 || tiredValue === 10 || ageValue === 100){
+   gameOver();
+    }else{
+    setInterval(counting, 1000);
+    setInterval(hunger, 1000);
+    setInterval(tired, 1000);
+    setInterval(bored, 1000);
+    }
+}
+// const allIntervals = () => {
+//     if(hungerValue === 10 || boredValue === 10 || tiredValue === 10 || ageValue === 100){
+//     gameOver();
+//      }else{
+//      setInterval(counting, 1000);
+//      setInterval(hunger, 1000);
+//      setInterval(tired, 1000);
+//      setInterval(bored, 1000);
+//      }
+//     }
 
 function counting () {
    
@@ -67,6 +78,8 @@ function tired() {
     let tired = document.getElementById('tired');
     tiredValue ++;
     tired.innerHTML = `Tiredness: ${tiredValue}`;
+}else if (tiredValue === 10){
+    gameOver();
 }
 }
 
@@ -92,8 +105,11 @@ const play = () => {
     let bored = document.getElementById('bored');
     boredValue -= 1;
     bored.innerHTML = `Boredom: ${boredValue}`;
+    }else {
+        console.log()
     }
 };
+
 
 function reset() {
     
@@ -103,7 +119,15 @@ function reset() {
        console.log(ageValue);
 };
 
-
+// function gameOver() {
+//     clearInterval(allIntervals);
+//     const screen = document.getElementsByClassName('screen');
+//    const upperBody = document.getElementsByClassName('upperBody');
+//    const lowerBody = document.getElementsByClassName('lowerBody');
+//   console.log(upperBody);
+//   console.log(lowerBody);
+//   console.log(screen);
+// }
 
 
 

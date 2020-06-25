@@ -136,7 +136,7 @@ header {
 }
 .lowerBody {
     position: relative;
-    bottom: 47px;
+    bottom: 100px;
 }
 
 #head {
@@ -145,14 +145,65 @@ header {
     background-color: rgb(60, 212, 93);
     border: rgb(117, 253, 147);
     border-style: solid;
-    border-radius: 40%;
-    top: 1px;
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    /* top: 7px; */
     width: 40px;
-    height: 40px;
+    height: 60px;
     position: relative;
-    left: 110px;
+    /* left: 10px; */
     
 }
+
+#rEye {
+    /* margin: 10px; */
+    border-width: 4px;
+    background-color: rgb(227, 235, 229);
+    border: rgb(186, 241, 198);
+    border-style: solid;
+    border-radius: 40%;
+    bottom: 16px;
+    width: 10px;
+    height: 14px;
+    position: relative;
+    left: 2px;
+  
+}
+
+#lEye {
+    /* margin: 10px; */
+    border-width: 4px;
+    background-color: rgb(227, 235, 229);
+    border: rgb(186, 241, 198);
+    border-style: solid;
+    border-radius: 40%;
+    top: 4px;
+    width: 10px;
+    height: 14px;
+    position: relative;
+    left: 22px;
+  
+}
+
+
+#mouth{
+    /* margin: 10px; */
+    border-width: 2px;
+    background-color: rgb(214, 136, 71);
+    border: rgb(186, 241, 198);
+    border-style: solid;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    bottom: 10px;
+    width: 7px;
+    height: 7px;
+    position: relative;
+    left: 12px;
+  
+}
+
 
 #body {
     margin-bottom: -10px;
@@ -161,12 +212,25 @@ header {
     border: rgb(60, 212, 93);
     border-style: solid;
     border-radius: 50%;
-    /* top: 4px; */
+    top: 100px;
     /* bottom: -2px; */
     width: 50px;
     height: 55px;
     position: relative;
     left: 105px;
+ }
+
+ .upperBody {
+     position: relative;
+    bottom: 50px;
+ }
+
+ #gameOver {
+     font-size: 20px;
+     color: rgb(255, 0, 0);
+     position: relative;
+     width: 100%;
+     background-color: black;
  }
 /*
 #rThigh {
@@ -289,11 +353,11 @@ header {
     border-top-right-radius: 5%;
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
-   top: 30px;
+   top: 60px;
     width: 20px;
     height: 10px;
     position: relative;
-    left:138px;
+    /* left:138px; */
     display: inline-block;
 }
 
@@ -308,11 +372,11 @@ header {
     border-top-right-radius: 5%;
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
-    top: 30px;
+    top: 60px;
     width: 20px;
     height: 10px;
     position: relative;
-    left: 80px;
+    /* left: 80px; */
     display: inline-block;
 }
 
@@ -330,9 +394,9 @@ header {
     width: 40px;
     height: 10px;
     position: relative;
-    bottom: 35px;
+    /* bottom: 35px; */
 
-    left: 80px;
+    left: -30px;
     /* left: 117px; */
     transform: rotate(-40deg);
 }
@@ -351,10 +415,10 @@ border-bottom-right-radius: 5%;
 width: 40px;
 height: 10px;
 position: relative;
-bottom: 45px;
+bottom: 15px;
 
-left: 143px;
-/* left: 117px; */
+/* left: 143px; */
+left: 35px;
 transform: rotate(40deg);
 }
  
