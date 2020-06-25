@@ -13,6 +13,9 @@ Where do I start?
         --lights
         --feed
         --play
+    -Connection your buttons to actions
+    -set up the timer
+    -
 
 What do I need to do to create a Tomagotchi?
     -How long is this tomagachi supposed to be alive?

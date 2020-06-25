@@ -4,6 +4,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+}
+
+button:hover {
     cursor: pointer;
 }
 
@@ -90,13 +94,16 @@ header {
 }
 
 .allButtons {
-    left: 1em;
-    bottom: 1em;
+    position: relative;
+    left: -58px;
+    bottom: 4.2em;
    
 }
 
 
 .myButtons {
+    position: relative;
+
     text-align: center;
     background: rgb(212, 177, 19);
     border-radius: 45%;
@@ -113,8 +120,6 @@ header {
 #leftB {
      transform: rotate(45deg);
      position: relative;
-    
-
 }
 
 #leftC {
@@ -129,4 +134,279 @@ header {
    left: 120px;
 
 }
+.lowerBody {
+    position: relative;
+    bottom: 47px;
+}
+
+#head {
+    /* margin: 10px; */
+    border-width: 2px;
+    background-color: rgb(60, 212, 93);
+    border: rgb(117, 253, 147);
+    border-style: solid;
+    border-radius: 40%;
+    top: 1px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 110px;
+    
+}
+
+#body {
+    margin-bottom: -10px;
+    border-width: 2px;
+    background-color: rgb(3, 148, 10);
+    border: rgb(60, 212, 93);
+    border-style: solid;
+    border-radius: 50%;
+    /* top: 4px; */
+    /* bottom: -2px; */
+    width: 50px;
+    height: 55px;
+    position: relative;
+    left: 105px;
+ }
+/*
+#rThigh {
+    margin-top: 1px;
+    background-color: rgb(219, 42, 42);
+    border: rgb(223, 92, 92);
+    border-style: solid;
+    border-width: 2px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    width: 10px;
+    height: 30px;
+    top: 2px;
+    position: relative;
+    left: 98px;
+    transform: rotate(30deg);
+    display: inline-block;
+}
+
+#lThigh {
+    display: inline-block;
+    margin-top: 1px;
+    background-color: rgb(219, 42, 42);
+    border: rgb(223, 92, 92);
+    border-style: solid;
+    border-width: 2px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    width: 10px;
+    height: 30px;
+    position: relative;
+    left: 137px;
+    transform: rotate(-30deg);
+}
+
+#rKnee {
+    margin-top: 1px;
+    background-color: rgb(219, 42, 42);
+    border: rgb(223, 92, 92);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    width: 13px;
+    height: 13px;
+    position: relative;
+    left: 90px;
+    bottom: 11px;
+    border-radius: 50%;
+   
+}
+#lKnee {
+    margin-top: 1px;
+    background-color: rgb(219, 42, 42);
+    border: rgb(223, 92, 92);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    top: 8px;
+    width: 13px;
+    height: 14px;
+    position: relative;
+    left: 128px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#rCalf {
+    margin-top: 1px;
+    background-color: rgb(219, 42, 42);
+    border: rgb(223, 92, 92);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    width: 12px;
+    height: 30px;
+    position: relative;
+    left: 90px;
+    display: inline-block;
+    bottom: 17px;
+}
+
+#lCalf {
+    margin-top: 1px;
+    background-color: rgb(219, 42, 42);
+    border: rgb(223, 92, 92);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    top: 34px;
+    width: 12px;
+    height: 30px;
+    position: relative;
+    left: 110px;
+    display: inline-block;
+} */
+
+#lFoot {
+    margin-top: 1px;
+    background-color: rgb(60, 212, 93);
+    border: rgb(117, 253, 147);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+   top: 30px;
+    width: 20px;
+    height: 10px;
+    position: relative;
+    left:138px;
+    display: inline-block;
+}
+
+
+#rFoot {
+    margin-top: 1px;
+    background-color: rgb(60, 212, 93);
+    border: rgb(117, 253, 147);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    top: 30px;
+    width: 20px;
+    height: 10px;
+    position: relative;
+    left: 80px;
+    display: inline-block;
+}
+
+#lUpperArm {
+    /* margin-top: 1px; */
+    background-color: rgb(60, 212, 93);
+    border: rgb(117, 253, 147);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 60%;
+    border-top-right-radius: 60%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 75%;
+    /* bottom: 7px; */
+    width: 40px;
+    height: 10px;
+    position: relative;
+    bottom: 35px;
+
+    left: 80px;
+    /* left: 117px; */
+    transform: rotate(-40deg);
+}
+
+#rUpperArm {
+/* margin-top: 1px; */
+background-color: rgb(60, 212, 93);
+    border: rgb(117, 253, 147);
+border-style: solid;
+border-width: 1px;
+border-top-left-radius: 60%;
+border-top-right-radius: 60%;
+border-bottom-left-radius: 75%;
+border-bottom-right-radius: 5%;
+/* bottom: 7px; */
+width: 40px;
+height: 10px;
+position: relative;
+bottom: 45px;
+
+left: 143px;
+/* left: 117px; */
+transform: rotate(40deg);
+}
+ 
+/* #lLowerArm {
+
+background-color: rgb(219, 42, 42);
+border: rgb(223, 92, 92);
+border-style: solid;
+border-width: 1px;
+border-top-left-radius: 60%;
+border-top-right-radius: 60%;
+border-bottom-left-radius: 60%;
+border-bottom-right-radius: 60%;
+
+width: 40px;
+height: 10px;
+position: relative;
+bottom: 48px;
+
+left: 49px;
+
+transform: rotate(10deg);
+} */
+
+
+/* #rLowerArm {
+
+background-color: rgb(219, 42, 42);
+border: rgb(223, 92, 92);
+border-style: solid;
+border-width: 1px;
+border-top-left-radius: 60%;
+border-top-right-radius: 60%;
+border-bottom-left-radius: 60%;
+border-bottom-right-radius: 60%;
+
+width: 40px;
+height: 10px;
+position: relative;
+bottom: 54px;
+
+left: 175px; 
+}  */
+
+
+
+/* 
+
+                  
+                    <div id="lUpperArm"></div>
+                    <div id="rUpperArm"></div>
+                    <div id="lLowerArm"></div>
+                    <div id="lUpperArm"></div>*/
+                  
 
