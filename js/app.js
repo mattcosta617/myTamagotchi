@@ -1,4 +1,3 @@
-
 const startTime = 5;
 let time = startTime * 60;
 
@@ -7,6 +6,9 @@ let ageValue = 1;
 let hungerValue = 0;
 let boredValue = 0;
 let tiredValue = 0;
+
+
+
 
 const typeName = () => {
     // let name = prompt('What would you like to name your tomagochi?', 'Tommy Gotchi!');
@@ -25,6 +27,7 @@ const typeName = () => {
 };
 
 
+
 function counting () {
    
     
@@ -38,28 +41,35 @@ function counting () {
    if(time < 0) {
    reset();
    } 
-    
+
+        
 }
 
 function hunger() {
+    if(hungerValue < 10){
     let hunger = document.getElementById('hungry');
   
-    hungerValue += 2;
+    hungerValue ++;
     hunger.innerHTML = `Hunger: ${hungerValue}`;
-    
+    }
 }
 
 function bored() {
+    if(boredValue < 10){
     let bored = document.getElementById('bored');
-    boredValue += 2;
+    boredValue ++;
     bored.innerHTML = `Boredom: ${boredValue}`;
+}
 }
 
 function tired() {
+    if(tiredValue < 10){
     let tired = document.getElementById('tired');
     tiredValue ++;
     tired.innerHTML = `Tiredness: ${tiredValue}`;
 }
+}
+
 
 const feed = () => {
     let hunger = document.getElementById('hungry');
