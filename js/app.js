@@ -72,22 +72,27 @@ function tired() {
 
 
 const feed = () => {
+    if(hungerValue > 0){
     let hunger = document.getElementById('hungry');
     hungerValue -= 1;
     hunger.innerHTML = `Hunger: ${hungerValue}`;
+    }
 };
 
 const sleep = () => {
+    if (tiredValue > 0){
     let tired = document.getElementById('tired');
     tiredValue -= 1;
     tired.innerHTML = `Tiredness: ${tiredValue}`;
-
+    }
 };
 
 const play = () => {
+    if (boredValue > 0) {
     let bored = document.getElementById('bored');
     boredValue -= 1;
     bored.innerHTML = `Boredom: ${boredValue}`;
+    }
 };
 
 function reset() {
