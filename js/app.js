@@ -2,24 +2,28 @@
 const startTime = 5;
 let time = startTime * 60;
 
-
-
-const hungry = document.getElementById('hungry');
-const tired = document.getElementById('tired');
-const bored = document.getElementById('bored');
-const timer = document.getElementById('timer');
-const age = document.getElementById('age');
-let getName = document.getElementById('firstName');
-const startButton = document.getElementById('rightC');
-const snoozeButton = document.getElementById('leftC');
-const feedButton = document.getElementById('leftB');
-
-// startButton.addEventListener('click', handleStartGame)
-
-
 let ageValue = 1;
 
-setInterval(counting, 1000);
+let hungerValue = 0;
+let boredValue = 0;
+let tiredValue = 0;
+
+const typeName = () => {
+    // let name = prompt('What would you like to name your tomagochi?', 'Tommy Gotchi!');
+
+    // if (name != null) {
+
+    //     document.getElementById('firstName').innerHTML =
+    
+    //     `Hello! My name is ${name}!`;
+    // }
+
+    setInterval(counting, 1000)
+    setInterval(hunger, 31000);
+    setInterval(tired, 31000);
+    setInterval(bored, 20000);
+};
+
 
 function counting () {
    
@@ -37,32 +41,50 @@ function counting () {
     
 }
 
-
-
-// let hobbitClass = document.querySelector('.hobbits');
-// hobbitClass.appendChild(newDiv);
-function reset() {
-  clearInterval();
-   time = startTime * 1;
-    age.innerHTML = `Age: ${ageValue++}`;
-       console.log(ageValue);
-}
-
-
 function hunger() {
-   let hungerPains = document.getElementById(hungry);
-   let time = getElementById(time);
-   console.log(time);
-   console.log(hungerPains);
-}
-
-function tired() {
-    let sleepy = document.getElementById(tired);
+    let hunger = document.getElementById('hungry');
+    hungerValue += 2;
+    hunger.innerHTML = `Hunger: ${hungerValue}`;
 }
 
 function bored() {
-
+    let bored = document.getElementById('bored');
+    boredValue += 2;
+    bored.innerHTML = `Boredom: ${boredValue}`;
 }
+
+function tired() {
+    let tired = document.getElementById('tired');
+    tiredValue ++;
+    tired.innerHTML = `Tiredness: ${tiredValue}`;
+}
+
+
+function reset() {
+    
+    clearInterval();
+   time = startTime * 2;
+    age.innerHTML = `Age: ${ageValue++}`;
+       console.log(ageValue);
+};
+
+
+
+const feed = () => {
+    // let hunger = document.g
+
+
+};
+
+const sleep = () => {
+    let sleepy = document.getElementById(tired);
+    console.log(sleepy);
+
+};
+
+const play = () => {
+
+};
 
 $( ".target" ).hide();
 
@@ -88,3 +110,13 @@ $( ".target" ).show();
 //          return 0;
 //     }
 // }
+
+
+$(() => {
+
+    $('#submit').on('click', typeName);
+    $('#leftB').on('click', feed);
+    $('leftC').on('click', sleep);
+    $('rightC').on('click', play);
+    
+});
