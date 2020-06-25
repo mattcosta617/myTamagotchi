@@ -19,9 +19,9 @@ const typeName = () => {
     // }
 
     setInterval(counting, 1000)
-    setInterval(hunger, 31000);
-    setInterval(tired, 31000);
-    setInterval(bored, 20000);
+    setInterval(hunger, 3000);
+    setInterval(tired, 3000);
+    setInterval(bored, 2000);
 };
 
 
@@ -43,8 +43,10 @@ function counting () {
 
 function hunger() {
     let hunger = document.getElementById('hungry');
+  
     hungerValue += 2;
     hunger.innerHTML = `Hunger: ${hungerValue}`;
+    
 }
 
 function bored() {
@@ -59,6 +61,24 @@ function tired() {
     tired.innerHTML = `Tiredness: ${tiredValue}`;
 }
 
+const feed = () => {
+    let hunger = document.getElementById('hungry');
+    hungerValue -= 1;
+    hunger.innerHTML = `Hunger: ${hungerValue}`;
+};
+
+const sleep = () => {
+    let tired = document.getElementById('tired');
+    tiredValue -= 1;
+    tired.innerHTML = `Tiredness: ${tiredValue}`;
+
+};
+
+const play = () => {
+    let bored = document.getElementById('bored');
+    boredValue -= 1;
+    bored.innerHTML = `Boredom: ${boredValue}`;
+};
 
 function reset() {
     
@@ -70,21 +90,7 @@ function reset() {
 
 
 
-const feed = () => {
-    // let hunger = document.g
 
-
-};
-
-const sleep = () => {
-    let sleepy = document.getElementById(tired);
-    console.log(sleepy);
-
-};
-
-const play = () => {
-
-};
 
 $( ".target" ).hide();
 
@@ -116,7 +122,7 @@ $(() => {
 
     $('#submit').on('click', typeName);
     $('#leftB').on('click', feed);
-    $('leftC').on('click', sleep);
-    $('rightC').on('click', play);
+    $('#leftC').on('click', sleep);
+    $('#rightC').on('click', play);
     
 });
