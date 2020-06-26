@@ -18,12 +18,14 @@ timer = document.getElementById('timer');
 
 const typeName = () => {
     let name = prompt('What would you like to name your tomagochi?', 'Tommy Gotchi!');
+    let instructions = prompt(`To start the game press the Start button, for a faster game experience you can press Demo. Do not let your hunger, tiredness, or boredom reach 10 or your tomagochi will die. Every 5 minutes your tomagochi will age 1 year. Your goal is to reach 99 years old and live a fulfilled, happy life!`);
 
     if (name !== null) {
 
         document.getElementById('firstName').innerHTML =
-    
+        
         `Hello! My name is ${name}!`;
+        `INSTRUCTIONS: ${instructions}`;
     }
     if(ageValue > 100){
         clearInterval(clock);
@@ -45,18 +47,20 @@ const typeName = () => {
 
     //   <--------------DEMO VERSION------------------
       const demo = () => {
+        let instructions = prompt(`To start the game press the Start button, for a faster game experience you can press Demo. Do not let your hunger, tiredness, or boredom reach 10 or your tomagochi will die. Every 5 minutes your tomagochi will age 1 year. Your goal is to reach 99 years old and live a fulfilled, happy life!`);
         let name = prompt('What would you like to name your tomagochi?', 'Tommy Gotchi!');
-    
+        
         if (name !== null) {
     
             document.getElementById('firstName').innerHTML =
-        
-            `Hello! My name is ${name}!`;
+           
+            `Hello! My name is ${name}!`; 
+            `INSTRUCTIONS: ${instructions}`;
         }
         if(ageValue > 100){
             clearInterval(clock);
         }else{
-          setInterval(clock, 1000);
+          setInterval(clock, 500);
         }
 
     setInterval(hunger, 2000);
@@ -98,8 +102,13 @@ let hunger = () => {
 
     hunger.innerHTML = `Hunger: ${hungerValue}`;
     }else{
+        $("#body1").css({ 'display' : 'none'  });
+        
+        clearInterval(nightTime);
+        nightTime();
+        clearInterval(bored);
         gameOver = document.getElementById('gameOver');
-gameOver.innerHTML = `GAMEOVER!`;
+        gameOver.innerHTML = `GAMEOVER!`;
         gameOver;
         clearInterval(hunger);
       return;
@@ -123,7 +132,15 @@ bored = document.getElementById('bored');
     gameOver = document.getElementById('gameOver');
 gameOver.innerHTML = `GAMEOVER!`;
     gameOver;
+    $("#body1").css({ 'display' : 'none'  });
+    nightTime();
+    clearInterval(nightTime);
     clearInterval(bored);
+    // $("#lFoot").css({ 'top' : '35px', 'width' : '15px', 'left' : '2px' });, 'height' : '40px','left' : '47px', 'top' : '40px'
+    // $("#rFoot").css({ 'top' : '35px', 'width' : '15px', 'left' : '2px'  });
+    // $("#head").css({ 'left' : '5px', 'height' : '35px', 'top' : '-10px' });
+    // $("#lUpperArm").css({ 'height' : '15px', 'width' : '25px' });
+    // $("#rUpperArm").css({ 'height' : '15px', 'width' : '25px', 'left' : '25px' });
     return;
 }
 };
@@ -136,8 +153,11 @@ let tired = () => {
     
         tired.innerHTML = `Tiredness: ${tiredValue}`;
         }else {
+            $("#body1").css({ 'display' : 'none'  });
+            nightTime();clearInterval(nightTime);
+            clearInterval(bored);
             gameOver = document.getElementById('gameOver');
-gameOver.innerHTML = `GAMEOVER!`;
+            gameOver.innerHTML = `GAMEOVER!`;
             gameOver;
             clearInterval(tired);
             return;

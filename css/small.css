@@ -92,6 +92,7 @@ header {
 
 .screen {
     background-color: lightblue;
+    
    width: 265px;
    height: 325px;
    border-radius: 25%;
