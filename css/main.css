@@ -42,6 +42,15 @@ header {
     border-radius: 50%;
 }
 
+
+#demo:active {
+    position: relative;
+    box-shadow: 0 3px #666;
+    text-align: center;
+    background: rgb(1, 148, 21);
+    border-radius: 45%;
+}
+
 #submit {
     height: 30px;
     width: 70px;
