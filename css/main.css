@@ -54,7 +54,7 @@ header {
     border-top-left-radius: 100px;
     border-bottom-left-radius: 250px;
     border-bottom-right-radius: 250px;
-    border: rgb(1, 83, 12); 2px solid;
+    border: rgb(10, 139, 27) 10px solid;
     box-shadow: 0 15px 12px; #666;
  
 }
@@ -127,12 +127,13 @@ header {
 #leftB {
      transform: rotate(45deg);
      position: relative;
+     bottom: 10px;
 }
 
 #leftC {
     position: relative;
     left: 60px;
-    top: 30px;
+    top: 20px;
     
 }
 
@@ -140,6 +141,7 @@ header {
     transform: rotate(-45deg);
     position: relative;
    left: 116px;
+   bottom: 10px;
 
 }
 .lowerBody {
