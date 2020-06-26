@@ -1,5 +1,5 @@
 const startTime = 5;
-let time = startTime * 1;
+let time = startTime * 60;
 
 let ageValue = 1;
 
@@ -22,11 +22,13 @@ const typeName = () => {
         `Hello! My name is ${name}!`;
     }
  
-      setInterval(clock, 500);
+      setInterval(clock, 1000);
       setInterval(hunger, 10000);
       setInterval(bored, 10000);
       setInterval(tired, 10000);
+
       setInterval(stage2, 10000);
+      setInterval(stage3, 20000);
 
 }
 
@@ -142,14 +144,25 @@ function reset() {
 
 
 const stage2 = () => {
-
-
-       $("#body1").css({ 'width' : '60px', 'height' : '80px' });
-       $("#body1").css({ 'left' : '95px', 'bottom' : '90px' });
+       $("#body1").css({ 'width' : '60px', 'height' : '80px','left' : '95px', 'top' : '80px'  });
+       $("#lFoot").css({ 'top' : '65px', 'width' : '25px' });
+       $("#rFoot").css({ 'top' : '65px', 'width' : '25px' });
+       $("#head").css({ 'left' : '5px', 'height' : '70px', 'top' : '-10px' });
+       $("#lUpperArm").css({ 'height' : '15px', 'width' : '45px' });
+       $("#rUpperArm").css({ 'height' : '15px', 'width' : '45px', 'left' : '45px' });
    }
 
 
 
+   const stage3 = () => {
+    $("#body1").css({ 'width' : '85px', 'height' : '90px', 'left' : '80px', 'top' : '80px' });
+    $("#head").css({ 'left' : '5px', 'height' : '80px', 'top' : '-10px' });
+    $("#head").css({ 'left' : '20px', 'height' : '70px' });
+    $("#lFoot").css({ 'top' : '75px', 'width' : '25px', 'left' : '10px' });
+    $("#rFoot").css({ 'top' : '75px', 'width' : '25px', 'left' : '15px' });
+    $("#lUpperArm").css({ 'height' : '15px', 'width' : '45px' });
+    $("#rUpperArm").css({ 'height' : '15px', 'width' : '45px', 'left' : '65px' });
+}
 
 
 
