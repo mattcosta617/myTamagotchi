@@ -55,7 +55,7 @@ header {
     border-bottom-left-radius: 250px;
     border-bottom-right-radius: 250px;
     border: rgb(10, 139, 27) 10px solid;
-    box-shadow: 0 15px 12px; #666;
+    box-shadow: 0 15px 12px #666;
  
 }
 
@@ -307,4 +307,3 @@ left: 35px;
 transform: rotate(40deg);
 }
  
-                  

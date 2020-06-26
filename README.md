@@ -1,6 +1,46 @@
 # mattsGame
 
 
+
+How the game works:
+
+-First you will click start and it will prompt you to enter your name
+which will display during your time playing.
+
+-The timer will begin to count down from 5 minutes which means your 
+tomagochi is starting to age and every 5 minutes they will age 1 year.
+
+-You must prevent the boredom, tiredness, and hunger from reaching 10
+        ****If they reach 10 the game is over and you lose*******
+
+-The goal is to let your tomagochi live a full life and die of old age
+
+-Every 30 seconds the hunger will grow by 1.
+
+-every 50 seconds the boredom will grow by 1.
+
+-every 30 seconds the tiredness value will grow by 1.
+
+- click on the feed button to subtract 1 from hunger.
+
+-click on the play button to subtract 1 from boredom.
+
+-click on the sleep button to subtract 1 from tiredness.
+
+-After 2 and a half minutes it will switch from day time to night time where
+you will really start to need to get your rest in.
+
+-at the age of 5 your tomagochi will grow for the first time
+
+-following that your tomagochi will grow again for it's final time
+at the age of 10.
+
+-The max age is 99 years old, after that its time to call it quits.
+
+
+
+
+********PERSONAL NOTES ON GAME BUILDING*******
 This is out of order but I need this to know what I need to make react to the time intervals and in what order.
     - I need hunger, tired, and bored to increase by 2 every 2 1/2 minutes.
     - I need the feed action to decrease my hunger by 1
@@ -29,7 +69,7 @@ Where do I start?
         --play
     -Connection your buttons to actions
     -set up the timer
-    -
+    
 
 What do I need to do to create a Tomagotchi?
     -How long is this tomagachi supposed to be alive?
@@ -56,58 +96,15 @@ Buttons needed-----------------
         -- 
 
     -feed button
-        --How much will feeding affect hunger?
-            -Hunger -2 points
-        --What will you feed your tomagochi?
-            --Bananas, yogurt, and oats
-            --salmon
-            --Create random for food button
+        - hunger -1 points
 
     -Lights
-        -sleep: tiredness goes back to 0;
-        -sleep lasts 1 minutes
+        -lights out at 2:30
 
 
     -Play
-        -boredom -2 points
-        -randomize (Play catch, Play xbox, Play texas hold 'em)
+        -boredom -1 points
 
 
-
-
-
-
-    
-    
-
-
-
-
-Specifications
-Create a repo for your tomagotchi pet
-make a commit after you finish each one of the following
-Create a Class (JS Class, look at your notes if your forget) for your tomagotchi
-Instatiate your Tomagotchi
-Display a character of your choice on the screen to represent your pet
-Display the following metrics for your pet:
-Hunger (1-10 scale)
-Sleepiness (1-10 scale)
-Boredom (1-10 scale)
-Age
-Add buttons to the screen to feed your pet, turn off the lights, and play with 
-your pet.
-
-Add the ability to name your pet.
-Style the page.
-Increase your pet's age every x minutes
-Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your 
-choosing.
-
-You pet should die if Hunger, Boredom, or Sleepiness hits 10.
-Morph your pet at certain ages.
-Animate your pet across the screen while it's alive.
-Extras
-Have your tomagotchi give birth to baby tomagotchi...
-...with special powers (extend the class)!
-Add an excercise() method to your tomagotchi, that affects certain properties
-Add anything you can think of... use your imagination!
+Tomagachi should be named and when it is the game will begin. 
+        

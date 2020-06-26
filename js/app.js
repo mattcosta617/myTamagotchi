@@ -1,3 +1,7 @@
+
+// ---------------Values------------------------
+
+
 const startTime = 5;
 let time = startTime * 60;
 
@@ -9,7 +13,7 @@ let tiredValue = 0;
 
 timer = document.getElementById('timer');
 
-
+// <---------------Start the game by clicking-----------
 
 
 const typeName = () => {
@@ -28,16 +32,16 @@ const typeName = () => {
     }
       setInterval(hunger, 30000);
       setInterval(bored, 50000);
-      setInterval(tired, 100000);
+      setInterval(tired, 30000);
 
-      setInterval(stage2, 300000);
-      setInterval(stage3, 1200000);
+      setInterval(stage2, 1500000);
+      setInterval(stage3, 3000000);
       setInterval(nightTime, 150000)
       setInterval(dayTime, 300000);
 
 }
 
-
+// -------------------------Add to time, hunger, boredom, tiredness---------
     
 function clock () {
     if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 & ageValue < 100){
@@ -111,11 +115,24 @@ gameOver.innerHTML = `GAMEOVER!`;
         }
 };
 
+// ------------------Eat isnt currently working
+// const eat = () => {
+//     let eat = document.createElement('class');
+//     eat.setAttribute('id', 'eat');
+//     let mouth = document.getElementById('mouth');
+//     mouth.appendChild(eat);
+//     $("#eat").show({ 'position' : 'relative', 'height' : '10px', 'width' : '10px', 'background' : 'rgb(80, 47, 28);'});
+// }
+
+// ------------------Action buttons-----------
 
 
 const feed = () => {
+    
     if(hungerValue > 0){
+   
     let hunger = document.getElementById('hungry');
+  
     hungerValue -= 1;
     hunger.innerHTML = `Hunger: ${hungerValue}`;
     }
@@ -140,6 +157,8 @@ const play = () => {
     }
 };
 
+
+// -----------------Changes through intervals-------
 
 function reset() {
     
@@ -182,12 +201,16 @@ const stage2 = () => {
 };
 
 
+// ----------------------Click Functionality--------
+
 
 
 $(() => {
 
     $('#submit').on('click', typeName);
     $('#leftB').on('click', feed);
+    // $('#leftB').on('click', eat);
+    $('#eat').on('click', feed);
     $('#leftC').on('click', sleep);
     $('#rightC').on('click', play);
     
