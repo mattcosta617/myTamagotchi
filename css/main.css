@@ -161,10 +161,9 @@ header {
     width: 40px;
     height: 60px;
     position: relative;
-    animation: bounce;
-    animation-duration: 2s;
-    --animate-repeat: 2;
+    animation: bounce  2s infinite;
 }
+
 
 #rEye {
     border-width: 4px;
@@ -221,6 +220,7 @@ header {
     height: 55px;
     position: relative;
     left: 105px;
+    animation: tada 2s infinite;
  }
 
  .upperBody {

@@ -209,7 +209,7 @@ $(() => {
 
     $('#submit').on('click', typeName);
     $('#leftB').on('click', feed);
-    // $('#leftB').on('click', eat);
+    // $('#leftB').on('click', eat); ------------ eat does not currently work
     $('#eat').on('click', feed);
     $('#leftC').on('click', sleep);
     $('#rightC').on('click', play);
