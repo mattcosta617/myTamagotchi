@@ -1,5 +1,5 @@
 const startTime = 5;
-let time = startTime * 2;
+let time = startTime * 1;
 
 let ageValue = 1;
 
@@ -22,10 +22,10 @@ const typeName = () => {
         `Hello! My name is ${name}!`;
     }
  
-      setInterval(clock, 1000);
-      setInterval(hunger, 1000);
-      setInterval(bored, 1000);
-      setInterval(tired, 1000);
+      setInterval(clock, 500);
+      setInterval(hunger, 10000);
+      setInterval(bored, 10000);
+      setInterval(tired, 10000);
 
 }
 
@@ -134,24 +134,25 @@ const play = () => {
 function reset() {
     
     clearInterval();
-   time = startTime * 2;
+   time = startTime * 1;
     age.innerHTML = `Age: ${ageValue++}`;
        console.log(ageValue);
 };
 
 
 
-// function gameOver() {
-//     clearInterval();
-
-
+// const stage2 = () => {
+//    while(ageValue > 4) {
+//        $("#body1").css({ 'width' : '65px', 'height' : '90px' });
+//     }
 // }
 
 
 
-$( ".target" ).hide();
 
-$( ".target" ).show();
+// $( ".target" ).hide();
+
+// $( ".target" ).show();
 
 
 

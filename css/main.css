@@ -9,6 +9,7 @@ body {
 
 button:hover {
     cursor: pointer;
+    box-shadow: 0 3px #666;
 }
 
 header {
@@ -35,6 +36,14 @@ header {
     left: 10px;
     text-align: center;
     border-radius: 50%;
+}
+
+#submit:active {
+    position: relative;
+    box-shadow: 0 3px #666;
+    text-align: center;
+    background: rgb(1, 148, 21);
+    border-radius: 45%;
 }
 
 
@@ -94,17 +103,24 @@ header {
     position: relative;
     left: -58px;
     bottom: 4.2em;
-   
+
 }
 
+.myButtons:active {
+    background-color: #b4b64a;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 
 .myButtons {
     position: relative;
-
+    box-shadow: 0 3px #666;
     text-align: center;
     background: rgb(212, 177, 19);
     border-radius: 45%;
+
 }
+
 
 
 #leftB {
@@ -116,12 +132,13 @@ header {
     position: relative;
     left: 60px;
     top: 30px;
+    
 }
 
 #rightC {
     transform: rotate(-45deg);
     position: relative;
-   left: 120px;
+   left: 116px;
 
 }
 .lowerBody {
@@ -141,6 +158,9 @@ header {
     width: 40px;
     height: 60px;
     position: relative;
+    animation: bounce;
+    animation-duration: 2s;
+    --animate-repeat: 2;
 }
 
 #rEye {
@@ -186,7 +206,7 @@ header {
 }
 
 
-#body {
+#body1 {
     margin-bottom: -10px;
     border-width: 2px;
     background-color: rgb(3, 148, 10);
@@ -211,8 +231,9 @@ header {
      position: relative;
      text-align: center;
      width: 250px;
-     margin-bottom: -30px;
+     margin-bottom: -50px;
      background-color: rgb(3, 148, 10);
+
  }
 
 #lFoot {
