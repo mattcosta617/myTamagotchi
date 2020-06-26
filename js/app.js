@@ -30,6 +30,9 @@ const typeName = () => {
     }else{
       setInterval(clock, 1000);
     }
+
+
+    // <----------------REAL VERSION---------------
       setInterval(hunger, 30000);
       setInterval(bored, 50000);
       setInterval(tired, 30000);
@@ -38,6 +41,17 @@ const typeName = () => {
       setInterval(stage3, 3000000);
       setInterval(nightTime, 150000)
       setInterval(dayTime, 300000);
+
+    //   <--------------DEMO VERSION------------------
+
+    // setInterval(hunger, 2000);
+    // setInterval(bored, 2000);
+    // setInterval(tired, 2000);
+
+    // setInterval(stage2, 1500);
+    // setInterval(stage3, 3000);
+    // setInterval(nightTime, 15000)
+    // setInterval(dayTime, 30000);
 
 }
 
@@ -181,8 +195,8 @@ const dayTime = () => {
 
 const stage2 = () => {
        $("#body1").css({ 'width' : '60px', 'height' : '80px','left' : '95px', 'top' : '80px'  });
-       $("#lFoot").css({ 'top' : '65px', 'width' : '25px' });
-       $("#rFoot").css({ 'top' : '65px', 'width' : '25px' });
+       $("#lFoot").css({ 'top' : '65px', 'width' : '25px', 'left' : '2px' });
+       $("#rFoot").css({ 'top' : '65px', 'width' : '25px', 'left' : '2px'  });
        $("#head").css({ 'left' : '5px', 'height' : '70px', 'top' : '-10px' });
        $("#lUpperArm").css({ 'height' : '15px', 'width' : '45px' });
        $("#rUpperArm").css({ 'height' : '15px', 'width' : '45px', 'left' : '45px' });
