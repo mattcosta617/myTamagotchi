@@ -21,14 +21,19 @@ const typeName = () => {
     
         `Hello! My name is ${name}!`;
     }
- 
+    if(ageValue > 100){
+        clearInterval(clock);
+    }else{
       setInterval(clock, 1000);
-      setInterval(hunger, 10000);
-      setInterval(bored, 10000);
-      setInterval(tired, 10000);
+    }
+      setInterval(hunger, 30000);
+      setInterval(bored, 50000);
+      setInterval(tired, 100000);
 
-      setInterval(stage2, 10000);
-      setInterval(stage3, 20000);
+      setInterval(stage2, 300000);
+      setInterval(stage3, 1200000);
+      setInterval(nightTime, 150000)
+      setInterval(dayTime, 300000);
 
 }
 
@@ -46,8 +51,6 @@ function clock () {
     time--;
    if(time < 0) {
    reset();
-   }else{
- 
    }
 }
         
@@ -65,6 +68,7 @@ let hunger = () => {
         gameOver = document.getElementById('gameOver');
 gameOver.innerHTML = `GAMEOVER!`;
         gameOver;
+        clearInterval(hunger);
       return;
         
     }
@@ -86,6 +90,7 @@ bored = document.getElementById('bored');
     gameOver = document.getElementById('gameOver');
 gameOver.innerHTML = `GAMEOVER!`;
     gameOver;
+    clearInterval(bored);
     return;
 }
 };
@@ -101,6 +106,7 @@ let tired = () => {
             gameOver = document.getElementById('gameOver');
 gameOver.innerHTML = `GAMEOVER!`;
             gameOver;
+            clearInterval(tired);
             return;
         }
 };
@@ -120,6 +126,7 @@ const sleep = () => {
     let tired = document.getElementById('tired');
     tiredValue -= 1;
     tired.innerHTML = `Tiredness: ${tiredValue}`;
+   
     }
 };
 
@@ -142,6 +149,16 @@ function reset() {
        console.log(ageValue);
 };
 
+const nightTime = () => {
+
+        $(".screen").css({ 'background-color' : 'rgb(35, 72, 85)' });
+};
+
+const dayTime = () => {
+    $(".screen").css({ 'background-color' : 'lightblue' });
+}
+
+
 
 const stage2 = () => {
        $("#body1").css({ 'width' : '60px', 'height' : '80px','left' : '95px', 'top' : '80px'  });
@@ -150,7 +167,7 @@ const stage2 = () => {
        $("#head").css({ 'left' : '5px', 'height' : '70px', 'top' : '-10px' });
        $("#lUpperArm").css({ 'height' : '15px', 'width' : '45px' });
        $("#rUpperArm").css({ 'height' : '15px', 'width' : '45px', 'left' : '45px' });
-   }
+   };
 
 
 
@@ -162,14 +179,7 @@ const stage2 = () => {
     $("#rFoot").css({ 'top' : '75px', 'width' : '25px', 'left' : '15px' });
     $("#lUpperArm").css({ 'height' : '15px', 'width' : '45px' });
     $("#rUpperArm").css({ 'height' : '15px', 'width' : '45px', 'left' : '65px' });
-}
-
-
-
-// $( ".target" ).hide();
-
-// $( ".target" ).show();
-
+};
 
 
 
