@@ -1,6 +1,20 @@
 # mattsGame
 
 
+This is out of order but I need this to know what I need to make react to the time intervals and in what order.
+    - I need hunger, tired, and bored to increase by 2 every 2 1/2 minutes.
+    - I need the feed action to decrease my hunger by 1
+    - I need my sleep to put my tiredness back to zero
+    - I need play to increase my boredom by 1
+    <!-- - first things first I need to add functionality to my button that allows for name entry. -->
+    
+    -So the guideline for each of these is that I need time divided by 2 to add 1 to each of these objects(hungry,tired, bored).
+        In order to do so I will need to access the time function and create an equation that push out what I want to add to each one.
+        I also need to max out each of these at ****10**** but I cannot call an end game function without all of these objects created
+        that can cause the end of the game to occur
+        Once I do create the end game function I will need to make the maximum age 100 and if it surpasses that I will need a prompt that says game over and make sure that everything stops running and the game needs to be restarted maybe with a button click
+
+
 
 Where do I start?
     -Define your classes/id's in your html

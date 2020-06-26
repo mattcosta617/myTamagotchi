@@ -9,8 +9,11 @@ let tiredValue = 0;
 
 timer = document.getElementById('timer');
 
+if(hungerValue === 10){
+    clearInterval(clock);
+    console.log('Game stops here');
 
-
+    }
 
 const typeName = () => {
     let name = prompt('What would you like to name your tomagochi?', 'Tommy Gotchi!');
@@ -21,87 +24,76 @@ const typeName = () => {
     
         `Hello! My name is ${name}!`;
     }
- 
-      setInterval(clock, 1000);
-      setInterval(hunger, 1000);
-      setInterval(bored, 1000);
-      setInterval(tired, 1000);
-
+        let clear = setInterval(clock, 1000);
+        let clear2 = setInterval(hunger, 1000);
+        let clear3 = setInterval(tired, 1000);
+        let clear4 = setInterval(bored, 1000); 
+    if(hunger >= 10 || tired >= 10 || bored >= 10 || age >= 100){
+        clearInterval(clear);
+        clearInterval(clear2);
+        clearInterval(clear3);
+        clearInterval(clear4);
+    }
 }
+// }
 
-
-    
-function clock () {
-    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 & ageValue < 100){
     const mins = Math.floor(time/60);
     let secs = time % 60;
 
     secs = secs < 10 ? '0' + secs : secs;
 
     timer.innerHTML = `${mins}: ${secs}`;
-
+    
+function clock () {
+   
+    
     time--;
    if(time < 0) {
    reset();
-   }else{
- 
+   } 
+   if(hungerValue === 10){
+       gameOver();
    }
-}
         
 }
 
-let hunger = () => {
-
-    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 & ageValue < 100){
-    hunger = document.getElementById('hungry');
-   
-    hungerValue++;
-
+function hunger() {
+    if(hungerValue < 10){
+    let hunger = document.getElementById('hungry');
+    // hungerValue ++;
     hunger.innerHTML = `Hunger: ${hungerValue}`;
+    console.log(hungerValue);
     }else{
-        gameOver = document.getElementById('gameOver');
-gameOver.innerHTML = `GAMEOVER!`;
-        gameOver;
-      return;
+        gameOver();
+        hungerValue = 0;
         
     }
-    
-
-  
- };
+ }
 
 
-let bored = () => {
-    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 & ageValue < 100){
-            
-bored = document.getElementById('bored');
-       
-        boredValue++;
-    
-       bored.innerHTML = `Boredom: ${boredValue}`;
+function bored() {
+    if(boredValue < 10){
+    let bored = document.getElementById('bored');
+    // boredValue ++;
+    bored.innerHTML = `Boredom: ${boredValue}`;
 }else{
-    gameOver = document.getElementById('gameOver');
-gameOver.innerHTML = `GAMEOVER!`;
-    gameOver;
-    return;
+    gameOver();
+    boredValue = 0;
+  
 }
-};
+}
 
-let tired = () => {
-    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 & ageValue < 100){
-        tired = document.getElementById('tired');
-       
-        tiredValue++;
-    
-        tired.innerHTML = `Tiredness: ${tiredValue}`;
-        }else {
-            gameOver = document.getElementById('gameOver');
-gameOver.innerHTML = `GAMEOVER!`;
-            gameOver;
-            return;
-        }
-};
-
+function tired() {
+    if(tiredValue < 10){
+    let tired = document.getElementById('tired');
+    // tiredValue ++;
+    tired.innerHTML = `Tiredness: ${tiredValue}`;
+}else{
+    gameOver();
+    tiredValue = 0;
+   
+}
+}
 
 
 const feed = () => {
@@ -141,11 +133,11 @@ function reset() {
 
 
 
-// function gameOver() {
-//     clearInterval();
+function gameOver() {
+    clearInterval();
 
 
-// }
+}
 
 
 
