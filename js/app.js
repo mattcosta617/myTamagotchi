@@ -26,6 +26,7 @@ const typeName = () => {
       setInterval(hunger, 10000);
       setInterval(bored, 10000);
       setInterval(tired, 10000);
+      setInterval(stage2, 10000);
 
 }
 
@@ -140,12 +141,14 @@ function reset() {
 };
 
 
+const stage2 = () => {
 
-// const stage2 = () => {
-//    while(ageValue > 4) {
-//        $("#body1").css({ 'width' : '65px', 'height' : '90px' });
-//     }
-// }
+
+       $("#body1").css({ 'width' : '60px', 'height' : '80px' });
+       $("#body1").css({ 'left' : '95px', 'bottom' : '90px' });
+   }
+
+
 
 
 
