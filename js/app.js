@@ -41,19 +41,34 @@ const typeName = () => {
       setInterval(stage3, 3000000);
       setInterval(nightTime, 150000)
       setInterval(dayTime, 300000);
+};
 
     //   <--------------DEMO VERSION------------------
+      const demo = () => {
+        let name = prompt('What would you like to name your tomagochi?', 'Tommy Gotchi!');
+    
+        if (name !== null) {
+    
+            document.getElementById('firstName').innerHTML =
+        
+            `Hello! My name is ${name}!`;
+        }
+        if(ageValue > 100){
+            clearInterval(clock);
+        }else{
+          setInterval(clock, 1000);
+        }
 
-    // setInterval(hunger, 2000);
-    // setInterval(bored, 2000);
-    // setInterval(tired, 2000);
+    setInterval(hunger, 2000);
+    setInterval(bored, 2000);
+    setInterval(tired, 2000);
 
-    // setInterval(stage2, 1500);
-    // setInterval(stage3, 3000);
-    // setInterval(nightTime, 15000)
-    // setInterval(dayTime, 30000);
+    setInterval(stage2, 1500);
+    setInterval(stage3, 3000);
+    setInterval(nightTime, 15000)
+    setInterval(dayTime, 30000);
 
-}
+};
 
 // -------------------------Add to time, hunger, boredom, tiredness---------
     
@@ -227,5 +242,6 @@ $(() => {
     $('#eat').on('click', feed);
     $('#leftC').on('click', sleep);
     $('#rightC').on('click', play);
+    $('#demo').on('click', demo);
     
 });
