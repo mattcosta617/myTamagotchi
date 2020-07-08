@@ -60,15 +60,15 @@ const typeName = () => {
         if(ageValue > 100){
             clearInterval(clock);
         }else{
-          setInterval(clock, 500);
+          setInterval(clock, 50);
         }
 
     setInterval(hunger, 2000);
     setInterval(bored, 2000);
     setInterval(tired, 2000);
 
-    setInterval(stage2, 1500);
-    setInterval(stage3, 3000);
+    setInterval(stage2, 15000);
+    setInterval(stage3, 30000);
     setInterval(nightTime, 15000)
     setInterval(dayTime, 30000);
 
@@ -212,7 +212,7 @@ const play = () => {
 function reset() {
     
     clearInterval();
-   time = startTime * 1;
+   time = startTime * 60;
     age.innerHTML = `Age: ${ageValue++}`;
        console.log(ageValue);
 };
