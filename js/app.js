@@ -67,8 +67,8 @@ const typeName = () => {
     setInterval(bored, 2000);
     setInterval(tired, 2000);
 
-    setInterval(stage2, 15000);
-    setInterval(stage3, 30000);
+    setTimeout(stage2, 15000);
+    setTimeout(stage3, 30000);
     setInterval(nightTime, 15000)
     setInterval(dayTime, 30000);
 
@@ -229,22 +229,22 @@ const dayTime = () => {
 
 
 const stage2 = () => {
-       $("#body1").css({ 'width' : '60px', 'height' : '80px','left' : '95px', 'top' : '80px'  });
+       $("#body1").css({ 'width' : '60px', 'height' : '80px','left' : '95px', 'top' : '20px'  });
        $("#lFoot").css({ 'top' : '65px', 'width' : '25px', 'left' : '2px' });
        $("#rFoot").css({ 'top' : '65px', 'width' : '25px', 'left' : '2px'  });
        $("#head").css({ 'left' : '5px', 'height' : '70px', 'top' : '-10px' });
-       $("#lUpperArm").css({ 'height' : '15px', 'width' : '45px' });
+       $("#lUpperArm").css({ 'height' : '15px', 'width' : '45px', 'left' : '-35px', 'top' : '5px' });
        $("#rUpperArm").css({ 'height' : '15px', 'width' : '45px', 'left' : '45px' });
    };
 
 
 
    const stage3 = () => {
-    $("#body1").css({ 'width' : '85px', 'height' : '90px', 'left' : '80px', 'top' : '80px' });
+    $("#body1").css({ 'width' : '85px', 'height' : '100px', 'left' : '80px', 'top' : '20px' });
     $("#head").css({ 'left' : '5px', 'height' : '80px', 'top' : '-10px' });
     $("#head").css({ 'left' : '20px', 'height' : '70px' });
-    $("#lFoot").css({ 'top' : '75px', 'width' : '25px', 'left' : '10px' });
-    $("#rFoot").css({ 'top' : '75px', 'width' : '25px', 'left' : '15px' });
+    $("#lFoot").css({ 'top' : '80px', 'width' : '25px', 'left' : '10px' });
+    $("#rFoot").css({ 'top' : '80px', 'width' : '25px', 'left' : '15px' });
     $("#lUpperArm").css({ 'height' : '15px', 'width' : '45px' });
     $("#rUpperArm").css({ 'height' : '15px', 'width' : '45px', 'left' : '65px' });
 };
