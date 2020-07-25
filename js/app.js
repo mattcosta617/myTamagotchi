@@ -7,6 +7,7 @@ let time = startTime * 60;
 
 let ageValue = 1;
 
+
 let hungerValue = 0;
 let boredValue = 0;
 let tiredValue = 0;
@@ -18,7 +19,7 @@ timer = document.getElementById('timer');
 
 const typeName = () => {
     let name = prompt('What would you like to name your tomagochi?', 'Tommy Gotchi!');
-    let instructions = prompt(`To start the game press the Start button, for a faster game experience you can press Demo. Do not let your hunger, tiredness, or boredom reach 10 or your tomagochi will die. Every 5 minutes your tomagochi will age 1 year. Your goal is to reach 99 years old and live a fulfilled, happy life!`);
+    let instructions = prompt(`The object of this game is to give your tomagotchi a long lived life up to 100 years old, for a faster game experience you can press the Demo button to start. Do not let your hunger, tiredness, or boredom reach 10 or your tomagochi will die. Every 5 minutes your tomagochi will age 1 year. Press the feed, play, and sleep buttons to maintain hunger, boredom, and tiredness.`);
 
     if (name !== null) {
 
@@ -27,8 +28,23 @@ const typeName = () => {
         `Hello! My name is ${name}!`;
         `INSTRUCTIONS: ${instructions}`;
     }
-    if(ageValue > 100){
+    if(hungerValue >= 10 || tiredValue >= 10 || boredValue >= 10 || ageValue >= 100){
+        
+        $("#body1").css({ 'display' : 'none'  });
+        
+        gameOver = document.getElementById('gameOver');
+        gameOver.innerHTML = `GAMEOVER!`;
+        gameOver;
+        nightTime();
+        clearInterval(tired)
+        clearInterval(nightTime);
+        clearInterval(dayTime);
+        clearInterval(bored);
+        clearInterval(time);
+        clearInterval(hunger);
         clearInterval(clock);
+        return;
+
     }else{
       setInterval(clock, 1000);
     }
@@ -38,10 +54,9 @@ const typeName = () => {
       setInterval(hunger, 30000);
       setInterval(bored, 50000);
       setInterval(tired, 30000);
-
-      setInterval(stage2, 1500000);
-      setInterval(stage3, 3000000);
-      setInterval(nightTime, 150000)
+      setTimeout(stage2, 1500000);
+      setTimeout(stage3, 3000000);
+      setInterval(nightTime, 150000);
       setInterval(dayTime, 300000);
 };
 
@@ -57,27 +72,40 @@ const typeName = () => {
             `Hello! My name is ${name}!`; 
             `INSTRUCTIONS: ${instructions}`;
         }
-        if(ageValue > 100){
+        if(hungerValue >= 10 || tiredValue >= 10 || boredValue >= 10 || ageValue >= 100){
+            
+            $("#body1").css({ 'display' : 'none'  });
+            
+            gameOver = document.getElementById('gameOver');
+            gameOver.innerHTML = `GAMEOVER!`;
+            gameOver;
+            nightTime();
+            clearInterval(tired)
+            clearInterval(nightTime);
+            clearInterval(dayTime);
+            clearInterval(bored);
+            clearInterval(time);
+            clearInterval(hunger);
             clearInterval(clock);
+            return;
         }else{
-          setInterval(clock, 50);
+            setInterval(clock, -100);
         }
 
-    setInterval(hunger, 2000);
-    setInterval(bored, 2000);
-    setInterval(tired, 2000);
-
-    setTimeout(stage2, 15000);
-    setTimeout(stage3, 30000);
-    setInterval(nightTime, 15000)
-    setInterval(dayTime, 30000);
-
+            setInterval(bored, 2000);
+            setInterval(hunger, 2000);
+            setInterval(tired, 2000);
+            setTimeout(stage2, 15000);
+            setTimeout(stage3, 30000);
+            setInterval(nightTime, 15000)
+            setInterval(dayTime, 30000);
+    
 };
 
 // -------------------------Add to time, hunger, boredom, tiredness---------
     
 function clock () {
-    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 & ageValue < 100){
+    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 && ageValue <= 101){
     const mins = Math.floor(time/60);
     let secs = time % 60;
 
@@ -93,25 +121,31 @@ function clock () {
         
 }
 
+
 let hunger = () => {
 
-    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 & ageValue < 100){
+    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 && ageValue <= 101){
     hunger = document.getElementById('hungry');
    
     hungerValue++;
 
     hunger.innerHTML = `Hunger: ${hungerValue}`;
     }else{
+       
         $("#body1").css({ 'display' : 'none'  });
-        
-        clearInterval(nightTime);
-        nightTime();
-        clearInterval(bored);
+
         gameOver = document.getElementById('gameOver');
         gameOver.innerHTML = `GAMEOVER!`;
         gameOver;
+        nightTime();
+        clearInterval(tired)
+        clearInterval(nightTime);
+        clearInterval(dayTime);
+        clearInterval(bored);
+        clearInterval(time);
         clearInterval(hunger);
-      return;
+        clearInterval(clock);
+        return;
         
     }
     
@@ -121,7 +155,7 @@ let hunger = () => {
 
 
 let bored = () => {
-    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 & ageValue < 100){
+    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 & ageValue <= 101){
             
 bored = document.getElementById('bored');
        
@@ -129,40 +163,56 @@ bored = document.getElementById('bored');
     
        bored.innerHTML = `Boredom: ${boredValue}`;
 }else{
-    gameOver = document.getElementById('gameOver');
-gameOver.innerHTML = `GAMEOVER!`;
-    gameOver;
-    $("#body1").css({ 'display' : 'none'  });
-    nightTime();
-    clearInterval(nightTime);
-    clearInterval(bored);
-    // $("#lFoot").css({ 'top' : '35px', 'width' : '15px', 'left' : '2px' });, 'height' : '40px','left' : '47px', 'top' : '40px'
-    // $("#rFoot").css({ 'top' : '35px', 'width' : '15px', 'left' : '2px'  });
-    // $("#head").css({ 'left' : '5px', 'height' : '35px', 'top' : '-10px' });
-    // $("#lUpperArm").css({ 'height' : '15px', 'width' : '25px' });
-    // $("#rUpperArm").css({ 'height' : '15px', 'width' : '25px', 'left' : '25px' });
-    return;
+   
+        $("#body1").css({ 'display' : 'none'  });
+
+        gameOver = document.getElementById('gameOver');
+        gameOver.innerHTML = `GAMEOVER!`;
+        gameOver;
+        nightTime();
+        clearInterval(tired)
+        clearInterval(nightTime);
+        clearInterval(dayTime);
+        clearInterval(bored);
+        clearInterval(time);
+        clearInterval(hunger);
+        clearInterval(clock);
+
+        // $("#lFoot").css({ 'top' : '35px', 'width' : '15px', 'left' : '2px' });, 'height' : '40px','left' : '47px', 'top' : '40px'
+        // $("#rFoot").css({ 'top' : '35px', 'width' : '15px', 'left' : '2px'  });
+        // $("#head").css({ 'left' : '5px', 'height' : '35px', 'top' : '-10px' });
+        // $("#lUpperArm").css({ 'height' : '15px', 'width' : '25px' });
+        // $("#rUpperArm").css({ 'height' : '15px', 'width' : '25px', 'left' : '25px' });
+        return;
 }
 };
 
 let tired = () => {
-    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 & ageValue < 100){
+    if(hungerValue < 10 && tiredValue < 10 && boredValue < 10 && ageValue <= 101){
         tired = document.getElementById('tired');
        
         tiredValue++;
     
         tired.innerHTML = `Tiredness: ${tiredValue}`;
         }else {
+            
             $("#body1").css({ 'display' : 'none'  });
-            nightTime();clearInterval(nightTime);
-            clearInterval(bored);
+        
             gameOver = document.getElementById('gameOver');
             gameOver.innerHTML = `GAMEOVER!`;
             gameOver;
-            clearInterval(tired);
+            nightTime();
+            clearInterval(tired)
+            clearInterval(nightTime);
+            clearInterval(dayTime);
+            clearInterval(bored);
+            clearInterval(time);
+            clearInterval(hunger);
+            clearInterval(clock);
             return;
         }
 };
+
 
 // ------------------Eat isnt currently working
 // const eat = () => {
@@ -173,13 +223,16 @@ let tired = () => {
 //     $("#eat").show({ 'position' : 'relative', 'height' : '10px', 'width' : '10px', 'background' : 'rgb(80, 47, 28);'});
 // }
 
+
 // ------------------Action buttons-----------
+
+
 
 
 const feed = () => {
     
     if(hungerValue > 0){
-   
+    
     let hunger = document.getElementById('hungry');
   
     hungerValue -= 1;
